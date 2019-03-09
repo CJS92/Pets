@@ -1,6 +1,4 @@
-﻿// This is the pet class
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,19 +6,30 @@ using System.Threading.Tasks;
 
 namespace Pets
 {
-    class Pet
+    class Cat
     {
-        public string Type { get; }
         public string Name { get; }
         public string Owner { get; }
         public double Weight { get; }
 
-        public Pet(string petType, string petName, string petOwner, double petWeight)
+        public Cat(string petName, string petOwner, double petWeight)
         {
-            Type = petType;
             Name = petName;
             Owner = petOwner;
             Weight = petWeight;
+        }
+
+        public string Meow (int times)
+        {
+            int i = 0;
+            string meow = "meow.";
+            string meows = "";
+            while (i <= times)
+            {
+                meows = meows + meow;
+                i++;
+            }
+            return meows;
         }
 
         public string GetTag()
